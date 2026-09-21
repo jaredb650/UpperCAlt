@@ -1,35 +1,37 @@
 # Upper Capital
 
-Website for Upper Capital — a seed + growth venture fund based in San Juan, Puerto Rico.
+A single-page website for Upper Capital, a seed and growth venture fund in San Juan, Puerto Rico.
 
-Live at **https://jaredb650.github.io/UpperCapital/**
+## Local preview
 
-## Repo layout
+Run `python3 -m http.server 8000 --bind 127.0.0.1`, then visit http://127.0.0.1:8000/.
 
-```
-/
-├── index.html        # The site
-├── styles.css        # All styling
-├── script.js         # Cursor, type scramble, scroll reveals, footer clock
-├── content/
-│   └── source.md     # Reference copy scraped from the old upper.capital
-└── shared/
-    └── placeholders/ # Reserved for client-supplied assets
-```
+No build step or framework. JetBrains Mono from Google Fonts is the only external runtime asset; local monospace fallbacks remain available.
 
-Single page, vanilla HTML/CSS/JS, no build step, no framework. Only external dependency is JetBrains Mono loaded from Google Fonts.
+## Files
 
-## Editing content
+- `index.html`: page content and native focus-area disclosures
+- `styles.css`: design tokens, components, responsive layouts, and reduced-motion styles
+- `script.js`: layered Matrix code rain, scroll effects, counters, motion preferences, clock
+- `favicon.svg`: local icon
+- `assets/`: Amy and Stephen’s generated pixel portraits and exact image-model prompts
+- `content/source.md`: canonical content reference
+- `docs/design-audit.md`: critique, revision rationale, research sources, validation, and remaining content gaps
 
-All copy is hard-coded in `index.html` between HTML tags. To change wording:
+## Design and motion
 
-1. Open `index.html` in any editor (or Claude Code on the web).
-2. Find the text you want to change.
-3. Replace it.
-4. Save and commit — GitHub Pages auto-rebuilds in ~30s.
+The near-black, fuchsia, and monospace identity is preserved. Open editorial layouts replace repeated card grids. The background uses a 2D canvas for purple falling code streams at three depths. Heavy terminal typography, hard edges, subtle scanlines, and generated pixel portraits carry the CRT aesthetic. Native scrolling drives parallax, reading progress, and manifesto lighting; content remains available without JavaScript.
 
-## Theme
+The motion control remembers the visitor’s choice in session storage when available. OS reduced motion starts animation disabled. Canvas resolution and mobile particle count are bounded; drawing is limited to roughly 30fps, and animation pauses in hidden tabs.
 
-- Background: near-black (`#08080a`)
-- Accent (the "hot" colour): electric fuchsia (`#c026d9`) — defined as `--hl` in `styles.css`. Change the variable to re-tint the entire site.
-- Font: JetBrains Mono throughout.
+## Content and publication
+
+Edit copy in `index.html`. The audit records missing portfolio assets and unverified details removed in this revision. This alternate CRT version is published from the `main` branch of `jaredb650/UpperCAlt` using GitHub Pages. The original `jaredb650/UpperCapital` deployment remains separate.
+
+
+## Client comparison
+
+- Original: https://jaredb650.github.io/UpperCapital/
+- CRT revision: https://jaredb650.github.io/UpperCAlt/
+
+GitHub Pages serves this repository root from `main`. `.nojekyll` keeps it a plain static site. All asset URLs are relative so the project-path deployment works.
