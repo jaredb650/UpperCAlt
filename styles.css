@@ -219,23 +219,6 @@ main,footer {
 .hero__headline .accent {
   color:var(--accent);
 }
-.hero__annotation {
-  position:absolute;
-  right:var(--gutter);
-  top:56%;
-  display:flex;
-  gap:14px;
-  align-items:center;
-  color:var(--mute);
-  font-size:12px;
-  line-height:1.6;
-  letter-spacing:.03em;
-}
-.annotation-cross {
-  font-size:40px;
-  font-weight:400;
-  color:var(--accent);
-}
 .hero__bottom {
   display:flex;
   align-items:end;
@@ -379,6 +362,24 @@ main,footer {
   color:var(--ink);
   letter-spacing:-.04em;
 }
+.manifesto__beliefs {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6vw;
+  margin-top:70px;
+  padding-top:40px;
+  border-top:1px solid var(--rule);
+}
+.belief p {
+  margin-top:16px;
+  font-size:clamp(17px,1.5vw,22px);
+  line-height:1.6;
+  color:var(--ink);
+  letter-spacing:-.02em;
+}
+@media (max-width: 900px) {
+  .manifesto__beliefs { grid-template-columns:1fr; gap:36px; margin-top:50px; }
+}
 .evidence {
   background:var(--bg);
   padding-top:70px;
@@ -441,7 +442,7 @@ main,footer {
   align-items:end;
   margin-bottom:70px;
 }
-.focus h2,.team h2 {
+.focus h2,.team h2,.value h2,.roster h2 {
   font-size:clamp(46px,6.5vw,105px);
 }
 .focus__intro p {
@@ -699,10 +700,6 @@ main,footer {
     margin-top:80px;
     margin-bottom:80px;
   }
-  .hero__annotation {
-    top:60%;
-    font-size:12px;
-  }
   .hero__bottom {
     align-items:start;
     flex-direction:column;
@@ -791,11 +788,6 @@ main,footer {
     margin:60px 0 200px;
     line-height:1.12;
   }
-  .hero__annotation {
-    top:49%;
-    right:var(--gutter);
-    font-size:12px;
-  }
   .hero__bottom {
     padding-bottom:35px;
     gap:20px;
@@ -866,7 +858,7 @@ main,footer {
   .focus {
     border-radius:0;
   }
-  .focus h2,.team h2 {
+  .focus h2,.team h2,.value h2,.roster h2 {
     font-size:12vw;
   }
   .focus__intro {
@@ -1035,7 +1027,6 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.045em; }
 .hero__headline { font-weight: 800; letter-spacing: -.05em; }
 .line--outline { color: var(--ink); -webkit-text-stroke: 0; }
 .hero__headline .accent { text-shadow: 0 0 26px #c026d926; }
-.hero__annotation { font-size: 12px; color: var(--accent); }
 .hero__headline .line:last-child::after { content: '_'; color: var(--accent); animation: terminal-caret 1.2s steps(1) infinite; }
 @keyframes terminal-caret { 0%, 55% { opacity: 1; } 56%,100% { opacity: 0; } }
 .decode-text, .contact h2 { font-weight: 800; letter-spacing: -.045em; }
@@ -1085,7 +1076,6 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.045em; }
   .nav { gap: 12px; }
   .nav__links { margin-left: auto; }
   .hero__headline { font-size: 8.5vw; letter-spacing: -.05em; }
-  .hero__annotation { font-size: 12px; }
   .person { grid-template-columns: 96px 1fr; column-gap: 18px; row-gap: 10px; }
   .person__portrait { width: 96px; }
   .person__name { font-size: clamp(17px,5vw,23px); overflow-wrap: anywhere; }
@@ -1099,4 +1089,47 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.045em; }
 @media(prefers-reduced-motion:reduce) { .hero__headline .line:last-child::after { animation: none; } }
 @media(max-width:600px) {
   .contact__layout { align-items: stretch; }
+}
+
+/* Added value */
+.value { background:var(--bg); }
+.value__grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border-top:1px solid var(--rule); border-left:1px solid var(--rule); }
+.value-card { padding:34px 28px 40px; border-right:1px solid var(--rule); border-bottom:1px solid var(--rule); display:grid; gap:18px; align-content:start; transition:background .25s; }
+.value-card:hover { background:#c026d90d; }
+.value-card__id { font-size:12px; color:var(--accent); }
+.value-card h3 { font-size:clamp(20px,1.8vw,28px); line-height:1.15; }
+.value-card p { font-size:14px; line-height:1.85; color:var(--mute); }
+
+/* Portfolio roster */
+.roster { background:#0d0c10; }
+.roster__wrap { overflow-x:auto; border-top:1px solid var(--rule); }
+.roster__table { width:100%; border-collapse:collapse; font-size:14px; min-width:640px; }
+.roster__table th { text-align:left; font-size:12px; font-weight:600; letter-spacing:.06em; color:var(--mute); padding:18px 16px 18px 0; border-bottom:1px solid var(--rule); white-space:nowrap; }
+.roster__table th button { font:inherit; color:inherit; letter-spacing:inherit; background:none; border:0; cursor:pointer; padding:0; }
+.roster__table th button::after { content:' ↕'; opacity:.4; }
+.roster__table th[aria-sort] button { color:var(--accent); }
+.roster__table th[aria-sort="ascending"] button::after { content:' ↑'; opacity:1; }
+.roster__table th[aria-sort="descending"] button::after { content:' ↓'; opacity:1; }
+.roster__table td { padding:20px 16px 20px 0; border-bottom:1px solid var(--rule); color:var(--mute); vertical-align:top; }
+.roster__table td:first-child { color:var(--ink); font-weight:700; font-size:16px; }
+.roster__table tbody tr { transition:background .2s; }
+.roster__table tbody tr:hover { background:#c026d90d; }
+.roster__table td a { color:var(--accent); margin-right:18px; white-space:nowrap; }
+
+/* Founder intake form */
+.intake { display:grid; grid-template-columns:1fr 1fr; gap:18px 24px; width:min(640px,100%); }
+.intake .eyebrow { grid-column:1/-1; color:var(--accent); }
+.intake label { display:grid; gap:8px; font-size:11px; letter-spacing:.08em; color:var(--mute); }
+.intake input, .intake textarea { font:inherit; font-size:15px; letter-spacing:0; color:var(--ink); background:#ffffff08; border:1px solid var(--rule); border-radius:0; padding:12px 14px; resize:vertical; }
+.intake input:focus-visible, .intake textarea:focus-visible { outline:none; border-color:var(--accent); background:#c026d90d; }
+.intake__wide, .intake .command-link, .intake .contact__command-note { grid-column:1/-1; }
+.intake .command-link { width:100%; justify-content:flex-start; border-left:0; border-right:0; background:none; color:var(--ink); cursor:pointer; font-family:inherit; text-align:left; }
+
+@media(max-width:1000px) {
+  .value__grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:720px) {
+  .value__grid { grid-template-columns:1fr; }
+  .intake { grid-template-columns:1fr; }
+  .nav__links a[href="#focus"] { display:none; }
 }

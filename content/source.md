@@ -29,6 +29,12 @@ Scraped from https://upper.capital/ on 2026-05-21. This is the canonical copy re
 
 > We bring experience as operators and provide resources to accelerate traction and growth of our portfolio companies.
 
+## Positioning (client edits, 2026-09-25)
+
+- Never describe Upper Capital as "institutional". Preferred: "We like to be the first professional check."
+- Belief: Entrepreneurs are artists who paint with innovation; an artist will always be necessary to propel, fuel and contain AI.
+- Belief: Since ~1996 (Bill Gates, "Content is King") content has reigned; the new kings are product designers and data owners.
+
 ## Focus areas
 
 - AI / ASI
@@ -40,8 +46,8 @@ Scraped from https://upper.capital/ on 2026-05-21. This is the canonical copy re
 
 | Name          | Role                            | LinkedIn                                  |
 |---------------|---------------------------------|-------------------------------------------|
-| Stephen Gill  | Founding Partner, Venture Lead  | https://linkedin.com/in/sjgill/           |
-| Amy Oswick    | —                               | https://linkedin.com/in/amyoswick/        |
+| Stephen Gill  | Founding Partner                | https://linkedin.com/in/sjgill/           |
+| Amy Oswick    | Venture Lead                    | https://linkedin.com/in/amyoswick/        |
 
 ## Contact
 
@@ -57,4 +63,3 @@ Scraped from https://upper.capital/ on 2026-05-21. This is the canonical copy re
 
 - No portfolio company names, logos, or descriptions exist on the current site (the "OUR PORTFOLIO" link 404s). Client to provide.
 - No real images or headshots — placeholders for now.
-- Amy Oswick's title not stated on the live site.

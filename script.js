@@ -42,6 +42,43 @@
   });
   const words = [...statement.querySelectorAll('.word')];
 
+
+  // Portfolio roster. PLACEHOLDER rows: replace with real companies from the client.
+  const PORTFOLIO = [
+    { name: 'PORTFOLIO_CO_01', field: 'AI / ASI', stage: 'Seed', year: 2024, site: '#', crunchbase: '#' },
+    { name: 'PORTFOLIO_CO_02', field: 'Infrastructure', stage: 'Growth', year: 2021, site: '#', crunchbase: '#' },
+    { name: 'PORTFOLIO_CO_03', field: 'Software', stage: 'Seed', year: 2019, site: '#', crunchbase: '#' },
+    { name: 'PORTFOLIO_CO_04', field: 'Ecommerce', stage: 'Growth', year: 2016, site: '#', crunchbase: '#' },
+  ];
+  const rosterBody = document.getElementById('roster-body');
+  const rosterHeads = [...document.querySelectorAll('.roster__table th')];
+  let sortKey = 'name', sortDir = 1;
+  function renderRoster() {
+    const rows = [...PORTFOLIO].sort((a, b) => (a[sortKey] > b[sortKey] ? 1 : a[sortKey] < b[sortKey] ? -1 : 0) * sortDir);
+    rosterBody.replaceChildren(...rows.map(co => {
+      const tr = document.createElement('tr');
+      [co.name, co.field, co.stage, co.year].forEach(v => { const td = document.createElement('td'); td.textContent = v; tr.append(td); });
+      const links = document.createElement('td');
+      [['SITE ↗', co.site], ['CRUNCHBASE ↗', co.crunchbase]].forEach(([label, href]) => {
+        if (!href) return;
+        const a = document.createElement('a'); a.href = href; a.textContent = label; a.target = '_blank'; a.rel = 'noopener'; links.append(a);
+      });
+      tr.append(links);
+      return tr;
+    }));
+    rosterHeads.forEach(th => {
+      const key = th.querySelector('button')?.dataset.key;
+      if (key === sortKey) th.setAttribute('aria-sort', sortDir > 0 ? 'ascending' : 'descending');
+      else th.removeAttribute('aria-sort');
+    });
+  }
+  rosterHeads.forEach(th => th.querySelector('button')?.addEventListener('click', e => {
+    const key = e.currentTarget.dataset.key;
+    sortDir = key === sortKey ? -sortDir : 1; sortKey = key;
+    renderRoster();
+  }));
+  renderRoster();
+
   document.querySelectorAll('.section-index, .focus__intro, .team h2, .contact__layout').forEach(el => el.classList.add('reveal'));
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => entries.forEach(entry => {
