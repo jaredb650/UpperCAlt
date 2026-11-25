@@ -13,4 +13,5 @@ node_modules/
 *-desktop.png
 *-mobile.png
 aperture-hero.jpeg
-
+__pycache__/
+*.pyc
