@@ -1,0 +1,90 @@
+{
+  "Datadog": {
+    "spotlight": true,
+    "spotlightOrder": 1,
+    "tag": "EARLY_CONVICTION",
+    "outcome": "PUBLIC · NASDAQ: DDOG",
+    "story": "Backed in 2014—five years before its 2019 Nasdaq IPO. Compounded into a global cloud observability and security standard generating $4B+ in annual revenue.",
+    "subline": "Public: Nasdaq DDOG · $4B+ ARR",
+    "crunchbase": "https://www.crunchbase.com/organization/datadog"
+  },
+  "Weights & Biases": {
+    "spotlight": true,
+    "spotlightOrder": 2,
+    "tag": "AI_INFRASTRUCTURE",
+    "outcome": "ACQUIRED BY COREWEAVE · 2025",
+    "story": "Backed at Series B as the developer platform powering modern ML teams. Acquired by CoreWeave in 2025 in a reported $1.7B deal to anchor AI cloud infrastructure.",
+    "subline": "Acquired by CoreWeave (2025) · ~$1.7B reported",
+    "crunchbase": "https://www.crunchbase.com/organization/weights-biases"
+  },
+  "Chalk": {
+    "spotlight": true,
+    "spotlightOrder": 3,
+    "tag": "FIRST_MONEY_IN",
+    "outcome": "$500M SERIES A",
+    "story": "First-check conviction at Pre-Seed in 2022. Built real-time ML data infrastructure for production AI and scaled to a $50M Series A at a $500M valuation.",
+    "subline": "Pre-Seed → $50M Series A at $500M valuation"
+  },
+  "Eight Sleep": {
+    "spotlight": true,
+    "spotlightOrder": 4,
+    "tag": "CATEGORY_CREATION",
+    "outcome": "$1.5B VALUATION",
+    "story": "Partnered at Series A in 2019. Scaled from connected sleep hardware into an AI-driven predictive health leader valued at $1.5B.",
+    "subline": "Series A → $1.5B valuation",
+    "crunchbase": "https://www.crunchbase.com/organization/eight-sleep"
+  },
+  "Unstoppable Domains": {
+    "spotlight": true,
+    "spotlightOrder": 5,
+    "tag": "MULTI_ROUND_SUPPORT",
+    "outcome": "$1B UNICORN · 3 ROUNDS",
+    "story": "Backed across three rounds starting in 2019. Stayed in the trenches with the founders as they scaled Web3 digital identity to a $1B valuation.",
+    "subline": "Unicorn · Three rounds of support",
+    "crunchbase": "https://www.crunchbase.com/organization/unstoppable-domains"
+  },
+  "xAI": {
+    "spotlight": true,
+    "spotlightOrder": 6,
+    "tag": "FRONTIER_SCALE",
+    "outcome": "ACQUIRED BY SPACEX · 2026",
+    "story": "Backed frontier AI models and large-scale compute infrastructure in 2024—culminating in its 2026 combination with SpaceX.",
+    "subline": "Acquired by SpaceX (2026)",
+    "crunchbase": "https://www.crunchbase.com/organization/xai"
+  },
+  "Adaptly": {
+    "subline": "Founding 2012 vintage · Acquired by Accenture (2018)",
+    "crunchbase": "https://www.crunchbase.com/organization/adaptly"
+  },
+  "Augmedix": {
+    "subline": "Nasdaq IPO → Acquired by Commure (2024)",
+    "crunchbase": "https://www.crunchbase.com/organization/augmedix"
+  },
+  "Bluecore": {
+    "subline": "Acquired by Insider One in $1B+ deal (2026)",
+    "crunchbase": "https://www.crunchbase.com/organization/bluecore"
+  },
+  "Chef Robotics": {
+    "subline": "Seed → $43.1M Series A · 70M+ meals assembled",
+    "crunchbase": "https://www.crunchbase.com/organization/chef-robotics"
+  },
+  "Fantasmo": {
+    "subline": "Acquired by TIER Mobility (2022)",
+    "crunchbase": "https://www.crunchbase.com/organization/fantasmo"
+  },
+  "Guideline": {
+    "subline": "$20B+ AUM · Acquired by Gusto (2025)",
+    "crunchbase": "https://www.crunchbase.com/organization/guideline"
+  },
+  "MasterClass": {
+    "subline": "Category-defining consumer education platform",
+    "crunchbase": "https://www.crunchbase.com/organization/masterclass"
+  },
+  "Prodigy": {
+    "subline": "Series A → Acquired by Upstart (2021)"
+  },
+  "Turing": {
+    "subline": "AGI infrastructure & enterprise AI · $2.2B valuation",
+    "crunchbase": "https://www.crunchbase.com/organization/turing"
+  }
+}

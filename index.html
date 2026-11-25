@@ -81,18 +81,82 @@
 
     <section class="roster section" id="roster" aria-labelledby="roster-title">
       <div class="section-index"><span>05 / PORTFOLIO.db</span><span class="index-rule"></span><span>COMPANIES WE BACK</span></div>
-      <div class="focus__intro"><h2 id="roster-title">THE<br><em>ROSTER.</em></h2><p>Sort by any column.<br>Follow the links out.</p></div>
-      <div class="roster__wrap">
-        <table class="roster__table">
-          <thead><tr>
-            <th scope="col" aria-sort="ascending"><button type="button" data-key="name">COMPANY</button></th>
-            <th scope="col"><button type="button" data-key="field">FIELD</button></th>
-            <th scope="col"><button type="button" data-key="stage">STAGE</button></th>
-            <th scope="col"><button type="button" data-key="year">YEAR</button></th>
-            <th scope="col"><span>LINKS</span></th>
-          </tr></thead>
-          <tbody id="roster-body"></tbody>
-        </table>
+      <div class="focus__intro">
+        <h2 id="roster-title">THE<br><em>ROSTER.</em></h2>
+        <p>Early conviction. Operator support.<br>From first check to category-defining outcomes.</p>
+      </div>
+
+      <dl class="roster__metrics reveal" id="roster-metrics" aria-label="Portfolio highlights">
+        <div class="roster__metric">
+          <dt>SELECTED_COMPANIES</dt>
+          <dd data-metric="total">60</dd>
+        </div>
+        <div class="roster__metric">
+          <dt>EXITS_&amp;_IPO</dt>
+          <dd data-metric="exits">10</dd>
+        </div>
+        <div class="roster__metric">
+          <dt>EARLY_STAGE_ENTRY</dt>
+          <dd data-metric="early">31</dd>
+        </div>
+        <div class="roster__metric">
+          <dt>FIRST_VINTAGE</dt>
+          <dd data-metric="vintage">2012<span class="accent">—</span></dd>
+        </div>
+      </dl>
+
+      <div class="spotlights" id="roster-spotlights">
+        <div class="roster__subhead">
+          <span class="eyebrow">&gt; CONVICTION_IN_ACTION // SELECTED_OUTCOMES</span>
+          <span class="eyebrow">EARLY ENTRY → SCALE</span>
+        </div>
+        <div class="spotlights__grid" id="spotlights-grid"></div>
+      </div>
+
+      <div class="roster__directory">
+        <div class="roster__subhead">
+          <span class="eyebrow">&gt; FULL_INDEX // FILTER_OR_SORT</span>
+          <span class="eyebrow" id="roster-count" aria-live="polite">SHOWING 15 OF 60</span>
+        </div>
+
+        <div class="roster__controls">
+          <div class="roster__bar">
+            <div class="roster__tabs" role="tablist" aria-label="Filter portfolio by category">
+              <button type="button" class="roster__tab is-active" role="tab" aria-selected="true" data-view="all">ALL <span data-count-view="all"></span></button>
+              <button type="button" class="roster__tab" role="tab" aria-selected="false" data-view="featured">FEATURED <span data-count-view="featured"></span></button>
+              <button type="button" class="roster__tab" role="tab" aria-selected="false" data-view="exits">EXITS &amp; IPO <span data-count-view="exits"></span></button>
+              <button type="button" class="roster__tab" role="tab" aria-selected="false" data-view="early">EARLY STAGE <span data-count-view="early"></span></button>
+            </div>
+            <label class="roster__search">
+              <span class="roster__search-prompt" aria-hidden="true">$</span>
+              <input type="search" id="roster-search" placeholder="FILTER_COMPANY_OR_SECTOR..." autocomplete="off" aria-label="Search portfolio companies">
+            </label>
+          </div>
+          <div class="roster__sectors" id="roster-sectors" role="group" aria-label="Filter by sector"></div>
+        </div>
+
+        <div class="roster__wrap">
+          <table class="roster__table">
+            <thead><tr>
+              <th scope="col"><button type="button" data-key="name">COMPANY</button></th>
+              <th scope="col"><button type="button" data-key="segment">SECTOR</button></th>
+              <th scope="col"><button type="button" data-key="stage">FIRST ROUND</button></th>
+              <th scope="col"><button type="button" data-key="year">YEAR</button></th>
+              <th scope="col"><button type="button" data-key="outcomeType">STATUS</button></th>
+              <th scope="col"><span>LINKS</span></th>
+            </tr></thead>
+            <tbody id="roster-body"></tbody>
+          </table>
+        </div>
+
+        <div class="roster__more" id="roster-more">
+          <button type="button" class="roster__toggle" id="roster-toggle" aria-expanded="false">
+            <span class="command-link__prompt" aria-hidden="true">$</span>
+            <span id="roster-toggle-label">SHOW_ALL_COMPANIES</span>
+            <span class="roster__toggle-arrow" aria-hidden="true">↓</span>
+          </button>
+        </div>
+        <noscript><p class="roster__noscript">Enable JavaScript to browse, filter, and sort the full Upper Capital portfolio roster.</p></noscript>
       </div>
     </section>
 
@@ -121,6 +185,7 @@
     </section>
   </main>
   <footer class="footer"><a href="#top" class="footer__wordmark" aria-label="Upper Capital, back to top">UPPER<span>_</span>CAPITAL</a><div class="footer__bottom"><span>© UPPER CAPITAL <span id="year">2026</span></span><span>SAN JUAN, PUERTO RICO</span><span id="footer-time">--:--:-- UTC</span><button class="motion-toggle" type="button" aria-pressed="false">MOTION <span>ON</span><i aria-hidden="true"></i></button></div></footer>
+  <script src="data/portfolio.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>
